@@ -29,32 +29,32 @@ const Sidebar = () => {
     { title: 'Dashboard', path: '/dashboard', src: <AiFillPieChart color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
 
     {
-      title: 'My Wallet', path: '/dashboard/mywallet', src: <IoWallet color={`${isDarkMode ? '#ffffff' : '#000000'}`} />,
+      title: 'My Wallet', path: '/mywallet', src: <IoWallet color={`${isDarkMode ? '#ffffff' : '#000000'}`} />,
       hasDropdown: true,
       dropdown: [
-        { title: 'Add Product', path: '/dashboard/addproduct' },
-        { title: 'Edit Product', path: '/dashboard/editproduct' },
-        { title: 'Delete Product', path: '/dashboard/deleteproduct' },
+        { title: 'Add Product', path: '/addproduct' },
+        { title: 'Edit Product', path: '/editproduct' },
+        { title: 'Delete Product', path: '/deleteproduct' },
       ],
     },
-    { title: 'My Accounts', path: '/dashboard/account', src: <MdSwitchAccount color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
+    { title: 'My Accounts', path: '/account', src: <MdSwitchAccount color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
 
     { title: 'Funds', path: '/dashboard/funds', src: <RiRefund2Line color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
 
-    { title: 'Permotions', path: '/dashboard/permotions', src: <LuBadgePercent color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
+    { title: 'Permotions', path: '/permotions', src: <LuBadgePercent color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
 
-    { title: 'Social Trading', path: '/dashboard/socialtrading', src: <MdCollectionsBookmark color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
+    { title: 'Social Trading', path: '/socialtrading', src: <MdCollectionsBookmark color={`${isDarkMode ? '#ffffff' : '#000000'}`} /> },
     {
-      title: 'Become Partner', path: '/dashboard/becomepartner', src: <FaHandshake color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
+      title: 'Become Partner', path: '/becomepartner', src: <FaHandshake color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
     },
     {
-      title: 'My Profile', path: '/dashboard/myprofile', src: <CgProfile color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
+      title: 'My Profile', path: '/myprofile', src: <CgProfile color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
     },
     {
-      title: 'Trading Platforms', path: '/dashboard/tradingplatforms', src: <PiTrafficSignalFill color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
+      title: 'Trading Platforms', path: '/tradingplatforms', src: <PiTrafficSignalFill color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
     },
     {
-      title: 'Trading Central', path: '/dashboard/tradingcentral', src: <FaCentercode color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
+      title: 'Trading Central', path: '/tradingcentral', src: <FaCentercode color={`${isDarkMode ? '#ffffff' : '#000000'}`} />
     },
   ];
 
@@ -65,7 +65,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={`${arrow ? 'w-2/4' : 'w-fit'
+        className={`${arrow ? 'w-2/4' : 'w-40'
           } hidden sm:block relative h-screen overflow-y-auto scroll-smooth duration-300  ${isDarkMode ? 'bg-black' : 'bg-white'} border-r ${isDarkMode ? 'border-gray-800' : 'border-gray-200'} p-5`}
       >
         <BsArrowLeftCircle
@@ -144,11 +144,9 @@ hover:text-black ${location.pathname === submenu.path && 'bg-gray-200'} ${locati
         </ul>
 
 
-        <div className='pt-4'>
-          <p> <IoMdHelpCircleOutline className='inline me-1' />
+        <div className={`pt-4 ${!arrow && 'hidden'}`}>
+          <p> <IoMdHelpCircleOutline className={`inline me-1 ${!arrow && 'hidden'}`} />
             Need Help? <Link className='text-[#04a6dd] underline'>Contact Support</Link></p>
-
-
         </div>
 
       </div>

@@ -6,7 +6,6 @@ import Home from '../pages/Home';
 import { useDarkMode } from '../context/Themecontext';
 
 function Dashboard() {
-
     const { isDarkMode } = useDarkMode();
 
     return (
@@ -23,5 +22,6 @@ function Dashboard() {
         </>
     );
 }
+
 
 export default Dashboard;
