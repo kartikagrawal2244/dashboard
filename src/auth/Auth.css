@@ -1,0 +1,7 @@
+    .signup-miniblock:not(:last-child) {
+        padding-bottom: 1.1rem;
+        margin-bottom: 2.1rem;
+        border-bottom: 1px solid;
+        border-image-source: linear-gradient(90deg, #4b5973 0%, rgba(216, 216, 216, 0) 100%);
+        border-image-slice: 1;
+    }
